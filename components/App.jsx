@@ -2,11 +2,18 @@ import React from 'react';
 import Header from './Header';
 import Schedule from './Schedule/Schedule';
 
+const schedule = {
+  marginLeft: '250px'
+};
+
 function App(){
   return (
     <div>
       <Header/>
-      <Schedule/>
+      <div style={schedule}>
+        <Schedule />
+      </div>
+
     </div>
   );
 }
