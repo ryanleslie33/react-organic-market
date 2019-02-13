@@ -1,19 +1,19 @@
 import React from 'react';
 import Header from './Header';
 import Schedule from './Schedule/Schedule';
+import FutureAvailable from './FutureAvailable/FutureAvailable';
+import { Switch, Route } from 'react-router-dom';
 
-const schedule = {
-  marginLeft: '250px'
-};
+
 
 function App(){
   return (
     <div>
-      <Header/>
-      <div style={schedule}>
-        <Schedule />
-      </div>
-
+    <Header/>
+      <Switch>
+        <Route exact path='/' component={Schedule} />
+        <Route exact path='/FutureAvailable' component={FutureAvailable} />
+      </Switch>
     </div>
   );
 }
